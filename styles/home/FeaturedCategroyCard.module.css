@@ -1,0 +1,66 @@
+.featuredCategory {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 1px 1px 8px #444;
+  cursor: pointer;
+}
+
+.featuredCategory::before,
+.featuredCategory::after {
+  transition: 400ms;
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 0;
+  background-color: #62cbff;
+  border-radius: 8px;
+  z-index: 10;
+  transform: rotate(30deg);
+}
+
+.featuredCategory::before {
+  top: -5rem;
+  right: 0.5rem;
+}
+
+.featuredCategory::after {
+  bottom: -5rem;
+  right: 7rem;
+}
+
+.featuredCategory:hover::before,
+.featuredCategory:hover::after {
+  height: 25rem;
+}
+
+.hiddenText {
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  z-index: 100;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  opacity: 0;
+  transition: 400ms;
+}
+.featuredCategory:hover .hiddenText {
+  opacity: 1;
+}
+.categoryTitle {
+  padding: 1rem 1.5rem;
+  position: absolute;
+  z-index: 5;
+  font-weight: 600 !important;
+  font-size: 2rem !important;
+  top: 0;
+  left: 0;
+}
+
+.categoryImg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+}

@@ -1,0 +1,18 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paper {
+  background-color: #fff;
+
+  border-radius: 4px;
+  box-shadow: 3px 3px 6px #111;
+  padding: 0.5rem 1rem;
+}
+.hr {
+  width: 100%;
+  height: 2px;
+  background-color: #039be5;
+  margin: 0.5rem 0 1rem 0;
+}

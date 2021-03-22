@@ -1,0 +1,98 @@
+.root {
+  position: relative;
+}
+.productCard {
+  width: 300px;
+  margin: 10px;
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: visible !important;
+  top: 0;
+  transition: 300ms !important;
+}
+.productCard:hover {
+  top: -0.5rem;
+  box-shadow: 1px 4px 4px #777;
+}
+.badge {
+  padding: 0.3rem 0.7rem;
+  position: absolute;
+  top: -0.6rem;
+  left: -0.4rem;
+  background-color: rgb(255, 59, 45);
+  z-index: 1000;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 3px #555;
+}
+.badgeContent {
+  color: #fff;
+  font-weight: 600;
+}
+.imgContainer {
+  overflow: hidden;
+}
+.img {
+  height: 200px;
+}
+.name {
+  padding: 1rem 0 0.3rem;
+}
+.price {
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.categoriesContainer {
+  display: flex;
+}
+.category {
+  margin: 0.5rem 0.2rem 0.5rem 0 !important;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  background-color: #e3e3e3;
+  color: #555;
+}
+.btnContainer {
+  padding: 0.3rem 0 !important;
+  display: flex;
+  justify-content: flex-start;
+}
+.modalContent {
+  height: 70%;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*outline: none;*/
+}
+.modalImg {
+  width: 100%;
+  position: relative;
+  top: 70px;
+  transform: scale(1.9);
+}
+.modalBtn {
+  background-color: #039be5;
+  color: #f4f4f4;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modalBtn:hover {
+  background-color: #0288d1;
+}
+
+@media (min-width: 1024px) {
+  .modalContent {
+    width: 70%;
+    height: 80%;
+  }
+  .modalImg {
+    transform: scale(0.9) translateY(-15%);
+    top: 0;
+  }
+}

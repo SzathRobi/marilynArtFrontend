@@ -1,0 +1,50 @@
+.root {
+  position: relative;
+  top: 60px;
+  overflow-x: hidden;
+  width: 100%;
+}
+.titleContainer {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  background-color: #b3e5fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-weight: 600 !important;
+  position: relative;
+  left: 300px;
+  opacity: 0;
+  animation: slideIn 1.2s forwards;
+}
+.back {
+  position: relative;
+  top: -2rem;
+  color: #4facfe;
+}
+.back::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: -5%;
+  background-color: #4facfe;
+  transition: 400ms;
+}
+.back:hover::before {
+  width: 110%;
+}
+
+@keyframes slideIn {
+  0% {
+    left: 400px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}

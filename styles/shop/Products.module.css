@@ -1,0 +1,15 @@
+.root {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .root {
+    width: calc(100% - 340px);
+    margin: 0 0 0 auto;
+  }
+}

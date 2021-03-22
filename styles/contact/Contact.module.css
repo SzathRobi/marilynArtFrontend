@@ -1,0 +1,124 @@
+.root {
+  position: relative;
+  top: 60px;
+}
+.titleContainer {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  background-color: #b3e5fc;
+}
+.title {
+  width: 10rem;
+  font-weight: 600;
+  position: relative;
+  left: 80%;
+  opacity: 0;
+  animation: slideIn 1.2s forwards;
+}
+.addressesContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.list {
+  margin-left: 2rem;
+}
+.listTitle {
+  font-weight: 600;
+}
+.googleMap {
+  border: none;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  left: -20px;
+}
+.sendMsg {
+  width: 90%;
+  margin: 5rem auto 3rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.inputSvgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contactSvg {
+  height: 13rem !important;
+  width: auto;
+  display: none !important;
+  position: absolute;
+  right: 0;
+  top: -5rem;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+.formTitle {
+  margin: 3rem 0;
+}
+.formRow {
+  margin: 1rem 0 !important;
+  width: 15rem;
+}
+.textField {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 0;
+  background-color: #039be5;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0288d1;
+}
+
+@media (min-width: 768px) {
+  .contactSvg {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sendMsg {
+    width: 50%;
+  }
+  .contactSvg {
+    height: 10rem !important;
+    top: -2rem;
+    right: -1.5rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .contactSvg {
+    height: 12rem !important;
+    top: -4rem;
+    right: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    left: 80%;
+    opacity: 0;
+  }
+  100% {
+    left: calc(50% - 5rem);
+    opacity: 1;
+  }
+}

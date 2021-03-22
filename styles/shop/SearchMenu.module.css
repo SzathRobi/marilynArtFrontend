@@ -1,0 +1,38 @@
+.root {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.searchForm {
+  margin-bottom: 2rem;
+  background-color: #74d1fc;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.searchInput {
+  width: 100%;
+}
+.searchBtn {
+  position: abolsute;
+  top: 0;
+  right: 0;
+}
+.collapse {
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: #b3e5fc;
+}
+.collapseText {
+  padding-left: 0.7rem;
+}
+.category {
+  border-radius: 0.5rem;
+  background-color: #74d1fc !important;
+}
+
+@media (min-width: 1024px) {
+  .root {
+    width: 300px;
+    margin: 0 1rem;
+  }
+}
