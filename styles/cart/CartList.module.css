@@ -6,16 +6,16 @@
   left: 0;
 }
 .cartHeader {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  background-color: #448581;
+  background-color: #4aaaa4;
   border-radius: 6px;
 }
 .title {
   font-weight: 600 !important;
-  font-size: 1.7rem !important;
+  font-size: 1.2rem !important;
   position: relative;
   color: #fff;
 }
@@ -33,15 +33,16 @@
 .total {
   display: flex;
   position: relative;
+  flex-direction: column;
 }
 .sum,
 .huf {
   margin: 0 0.5rem !important;
   font-weight: 600 !important;
-  font-size: 1.8rem !important;
+  font-size: 1rem !important;
 }
 .toPay {
-  width: 25%;
+  width: 15%;
 }
 .btn {
   background-color: #039be5;
@@ -52,7 +53,7 @@
   position: relative;
   top: 15px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 .btn:hover {

@@ -52,7 +52,7 @@ useEffect(() => {
         </Typography>
       </div>
       <div className={styles.productList}>
-        {isEmpty && <h1 className={styles.cartIsEmpty} style={warningStyle}>A kosara jeleneg üres!</h1>}
+        {isEmpty && <h2 className={styles.cartIsEmpty} style={warningStyle}>A kosara jeleneg üres!</h2>}
         {cart.map(product => (
           <ProductCard 
             product={product} 
