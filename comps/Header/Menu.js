@@ -29,6 +29,7 @@ const useStyles = makeStyles({
     position: "relative",
     left: "-0.5rem",
     padding: "0.5rem",
+    backgroundColor: "#fff"
   },
   divider: {
     margin: "10px 0 0 0"
