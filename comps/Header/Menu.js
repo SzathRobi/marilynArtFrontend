@@ -21,12 +21,14 @@ import StoreMallDirectoryRoundedIcon from "@material-ui/icons/StoreMallDirectory
 import ContactMailRoundedIcon from "@material-ui/icons/ContactMailRounded";
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import styles from "../../styles/header/Menu.module.css"
 
 const useStyles = makeStyles({
   root: {},
   closeBtn: {
     position: "relative",
-    right: 30
+    left: "-0.5rem",
+    padding: "0.5rem",
   },
   divider: {
     margin: "10px 0 0 0"
@@ -43,7 +45,7 @@ const Menu = ({ drawerOpen, updateDrawerOpen }) => {
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
             <IconButton onClick={updateDrawerOpen} className={classes.closeBtn}>
-              <CloseRoundedIcon />
+              <CloseRoundedIcon fontSize="small"/>
             </IconButton>
             Menü
           </ListSubheader>

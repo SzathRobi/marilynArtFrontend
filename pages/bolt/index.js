@@ -11,8 +11,6 @@ const Shop = ({products}) => {
     //getData()
   }, []);
 
-  console.log(products)
-
   return (
     <div className={styles.root}>
       <ShopLanding />
@@ -25,13 +23,15 @@ const Shop = ({products}) => {
 };
 
 export async function getStaticProps() {
-  const product_res = await fetch(`https://marilynart-backend.herokuapp.com/products`)
+  const { API_URL } = process.env
+  const product_res = await fetch(`${API_URL}/products`)
   const products = await product_res.json()
 
   return {
     props: {
         products
-    }
+    },
+    revalidate: 1
   }
 }
 

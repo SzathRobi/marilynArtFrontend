@@ -10,12 +10,13 @@
   position: relative;
 }
 .searchInput {
-  width: 100%;
+  width: 90%;
+  border: 2px solid red;
 }
 .searchBtn {
-  position: abolsute;
+  position: absolute;
   top: 0;
-  right: 0;
+  right: -2rem;
 }
 .collapse {
   margin: 0.5rem 0;

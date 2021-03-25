@@ -9,10 +9,13 @@ const PopularCard = ({ product }) => {
     backgroundColor: "#81d4fa"
   };
 
-  const CardBtnColor = {
+  const btnStyle = {
     fontWeight: 600,
     color: "#33ace4",
-    border: `2px solid #33ace4`
+    border: `2px solid #33ace4`,
+    position: "absolute",
+    bottom: "1rem",
+    left: "1rem"
   };
 
   return (
@@ -30,7 +33,7 @@ const PopularCard = ({ product }) => {
         <Typography variant="h6" className={styles.description}>
           {product.description}
         </Typography>
-        <Button style={CardBtnColor} variant="outlined">
+        <Button style={btnStyle} variant="outlined">
           Fedezd Fel
         </Button>
       </div>

@@ -6,7 +6,7 @@ import styles from '../styles/home/Home.module.css'
 import FeaturedCategories from '../comps/Home/FeaturedCategories/FeaturedCategories'
 import OnSale from '../comps/Home/OnSale/OnSale'
 
-function Home({products, onSaleProducts, featuredProducts}) {
+function Home({ onSaleProducts, featuredProducts}) {
 
   return (
     <div className={styles.container}>
@@ -24,7 +24,8 @@ function Home({products, onSaleProducts, featuredProducts}) {
 }
 
 export async function getStaticProps() {
-  const product_res = await fetch(`https://marilynart-backend.herokuapp.com/products`)
+  const { API_URL } = process.env
+  const product_res = await fetch(`${API_URL}/products`)
   const products = await product_res.json()
   const onSaleProducts = products.filter(product => product.onSale === true)
   const featuredProducts = products.filter(product => product.FeaturedProduct === true)
@@ -35,7 +36,8 @@ export async function getStaticProps() {
         products,
         onSaleProducts,
         featuredProducts
-    }
+    },
+    revalidate: 1
   }
 }
 

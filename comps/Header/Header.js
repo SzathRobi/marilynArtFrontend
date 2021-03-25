@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Menu from "./Menu";
 import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
-import styles from "../../styles/Header.module.css";
+import styles from "../../styles/header/Header.module.css";
 
 const Header = () => {
 

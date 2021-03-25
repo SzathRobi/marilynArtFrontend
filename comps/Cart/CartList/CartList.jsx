@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import Link from "next/link";
 import { Typography } from "@material-ui/core";
 import ProductCard from "./ProductCard/ProductCard";
 import MarilynContext from "../../../contexts/MarilynContext";
@@ -71,7 +72,7 @@ useEffect(() => {
           </Typography>
           <Typography className={styles.huf} variant="h6"> {cartTotal} Ft</Typography>
         </div>
-        <button onClick={() => toCheckout()} className={styles.btn}>TOVÁBB A FIZETÉSHEZ</button>
+        <Link href="/checkout" onClick={() => toCheckout()}><a className={styles.btn}>TOVÁBB A FIZETÉSHEZ</a></Link>
       </div>
     </div>
   );

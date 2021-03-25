@@ -40,19 +40,19 @@ const Register = () => {
     Router.push("/auth/bejelentkezes")
   }
 
-/*  const createUser = event => {
-    event.preventDefault()
-    const userObject = {
-      username: username,
-      email: email,
-      password: password
+  function ValidateEmail(inputText) {
+    const mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(inputText.value.match(mailformat)) {
+      alert("Valid email address!");
+      document.form1.text1.focus();
+      return true;
     }
-    console.log(userObject)
-    setUsername("")
-    setEmail("")
-    setPassword("")
-  }*/
-
+    else {
+      alert("You have entered an invalid email address!");
+      document.form1.text1.focus();
+      return false;
+    }
+  }
   return (
     <div className={styles.register}>
       <Image src="/register.svg" width={300} height={300} alt="register-img" />
