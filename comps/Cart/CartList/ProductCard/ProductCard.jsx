@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { Grid, TextField, Typography } from "@material-ui/core";
+import { TextField, Typography } from "@material-ui/core";
 import styles from "../../../../styles/cart/ProductCard.module.css";
 
 const ProductCard = ({product, incrementCartTotal, decrementCartTotal}) => {
@@ -28,13 +28,13 @@ const ProductCard = ({product, incrementCartTotal, decrementCartTotal}) => {
   }, [quantity])
 */
   return (
-    <Grid container className={styles.root}>
-      <Grid className={styles.product} item container xs={4}>
+    <div className={styles.root}>
+      <div className={styles.product}>
         <div className={styles.productInfo}>
           <div className={styles.imgContainer}>
             <img src={product.images[0].url} className={styles.img} alt="" />
           </div>
-          <div>
+          <div className={styles.content}>
             <Typography className={styles.name} variant="h6">
               {product.Name}
             </Typography>
@@ -44,28 +44,27 @@ const ProductCard = ({product, incrementCartTotal, decrementCartTotal}) => {
           </div>
         </div>
         
-      </Grid>
-      <Grid className={styles.container} item container xs={4}>
+      </div>
+      <div className={styles.container}>
         <div className={styles.quantityContainer}>
+          <button onClick={decrement} className={styles.quantityBtn}>-</button>
           <TextField
             className={styles.quantity}
             variant="filled"
+            size="small"
             type="text"
             onChange={(event) => updateQuanty(event)}
             value={quantity}
           />
-          <div className={styles.quantityBtnContainer}>
-            <button onClick={increment} className={styles.quantityBtn}>+</button>
-            <button onClick={decrement} className={styles.quantityBtn}>-</button>
-          </div>
+          <button onClick={increment} className={styles.quantityBtn}>+</button>
         </div>
-      </Grid>
-      <Grid className={styles.container} item container xs={4}>
+      </div>
+      <div className={styles.container}>
         <Typography className={styles.totalPrice} variant="h6">
           {total} Ft
         </Typography>
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 };
 

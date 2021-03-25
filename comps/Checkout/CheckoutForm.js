@@ -20,7 +20,7 @@ export default function CheckoutForm() {
 
   useEffect(async () => {
     // Create PaymentIntent as soon as the page loads
-    await axios.post("https://marilynart-backend.herokuapp.com/products", {items: cart})
+    await axios.post("https://marilynart-backend.herokuapp.com/orders", {items: cart})
       .then(res => {
           console.log(res)
           setClientSecret(res.data.clientSecret)
