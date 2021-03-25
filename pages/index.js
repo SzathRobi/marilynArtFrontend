@@ -25,7 +25,7 @@ function Home({ onSaleProducts, featuredProducts}) {
 
 export async function getStaticProps() {
   const { API_URL } = process.env
-  const product_res = await fetch(`${API_URL}/products`)
+  const product_res = await fetch(`https://marilynart-backend.herokuapp.com/products`)
   const products = await product_res.json()
   const onSaleProducts = products.filter(product => product.onSale === true)
   const featuredProducts = products.filter(product => product.FeaturedProduct === true)
