@@ -19,10 +19,9 @@
 .addressesContainer {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: space-evenly;
   justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 .list {
   margin-left: 2rem;
@@ -32,7 +31,7 @@
 }
 .googleMap {
   border: none;
-  width: 300px;
+  width: 20rem;
   height: 400px;
   position: relative;
   left: -20px;
@@ -89,12 +88,18 @@
 }
 
 @media (min-width: 768px) {
+  .addressesContainer {
+    flex-direction: row;
+  }
   .contactSvg {
     display: block !important;
   }
 }
 
 @media (min-width: 1024px) {
+  .googleMap {
+    width: 25rem;
+  }
   .sendMsg {
     width: 50%;
   }
@@ -106,6 +111,9 @@
 }
 
 @media (min-width: 1350px) {
+  .googleMap {
+    width: 30rem;
+  }
   .contactSvg {
     height: 12rem !important;
     top: -4rem;

@@ -1,59 +1,43 @@
-import { Button, Typography } from"@material-ui/core";
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { Button, Typography } from "@material-ui/core";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Link from "next/link";
-import ProductCard from "../../Shop/Products/ProductCard/ProductCard"
-import styles from "../../../styles/home/OnSale.module.css"
+import ProductCard from "../../Shop/Products/ProductCard/ProductCard";
+import styles from "../../../styles/home/OnSale.module.css";
 
-function OnSale({onSaleProducts}) {
-
+function OnSale({ onSaleProducts }) {
   const CardBtn = {
     width: 200,
     fontWeight: 600,
     color: "#f44336",
     border: `2px solid #f44336`,
     margin: "2rem auto 1rem 50%",
-    transform: "translateX(-50%)"
-    };  
+    transform: "translateX(-50%)",
+  };
+
+  const sliderWith = {
+    width: `calc(300px * ${onSaleProducts.length})`,
+  };
   return (
     <div className={styles.root}>
-      <Typography className={styles.title} variant="h3">Akciós Termékek</Typography>
+      <Typography className={styles.title} variant="h3">
+        Akciós Termékek
+      </Typography>
       <div className={styles.slider}>
-    	<div className={styles.slideTrack}>
-    	  {onSaleProducts.map(onSaleProduct => (
-            <ProductCard product={onSaleProduct}/>
+        <div className={styles.slideTrack} style={sliderWith}>
+          {onSaleProducts.map((onSaleProduct) => (
+            <ProductCard product={onSaleProduct} />
           ))}
-    	  {onSaleProducts.map(onSaleProduct => (
-            <ProductCard product={onSaleProduct}/>
-          ))}
-    	  {onSaleProducts.map(onSaleProduct => (
-            <ProductCard product={onSaleProduct}/>
-          ))}
-    	  {onSaleProducts.map(onSaleProduct => (
-            <ProductCard product={onSaleProduct}/>
-          ))}
-    	  {onSaleProducts.map(onSaleProduct => (
-            <ProductCard product={onSaleProduct}/>
-          ))}
-    	  {onSaleProducts.map(onSaleProduct => (
-            <ProductCard product={onSaleProduct}/>
-          ))}
-    	  {onSaleProducts.map(onSaleProduct => (
-            <ProductCard product={onSaleProduct}/>
-          ))}
-    	</div>
+        </div>
         <Link href="/bolt">
-            <a>
-          <Button 
-            style={CardBtn}
-            endIcon={<ArrowForwardIcon />}
-          >
-            MUTASS TÖBBET
-          </Button>
+          <a>
+            <Button style={CardBtn} endIcon={<ArrowForwardIcon />}>
+              MUTASS TÖBBET
+            </Button>
           </a>
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default OnSale
+export default OnSale;

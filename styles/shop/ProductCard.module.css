@@ -37,6 +37,7 @@
 }
 .name {
   padding: 1rem 0 0.3rem;
+  font-size: 1.3rem;
 }
 .price {
   font-weight: 600;
@@ -66,18 +67,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
   /*outline: none;*/
 }
 .modalImg {
-  width: 100%;
   position: relative;
-  top: 70px;
-  transform: scale(1.9);
+  top: 1.5rem;
+  max-height: 80%;
+  max-width: 100%;
 }
 .modalBtn {
   background-color: #039be5;
   color: #f4f4f4;
-  position: absolute;
+  position: absolute !important;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
@@ -90,9 +93,5 @@
   .modalContent {
     width: 70%;
     height: 80%;
-  }
-  .modalImg {
-    transform: scale(0.9) translateY(-15%);
-    top: 0;
   }
 }

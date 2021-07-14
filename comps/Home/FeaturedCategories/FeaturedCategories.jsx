@@ -1,15 +1,30 @@
-import FeaturedCategroyCard from "./FeaturedCategroyCard"
-import styles from "../../../styles/home/FeaturedCategories.module.css"
+import { useContext } from "react";
+import MarilynContext from "../../../contexts/MarilynContext";
+import FeaturedCategroyCard from "./FeaturedCategroyCard";
+import styles from "../../../styles/home/FeaturedCategories.module.css";
 
 function FeaturedCategories() {
+  const { categories } = useContext(MarilynContext);
+  console.log("categories:", categories);
+
+  const test = [
+    "/smoke.jpg",
+    "/citrine.jpg",
+    "/bracelet.png",
+    "ametistNecklace.jpg",
+  ];
+
   return (
     <div className={styles.featuredCategories}>
-      <FeaturedCategroyCard category={"CATEGORY"} img={"/citrine.jpg"} gridArea={"categ1"}/>
-      <FeaturedCategroyCard category={"CATEGORY"} img={"/necklace.png"} gridArea={"categ2"}/>
-      <FeaturedCategroyCard category={"CATEGORY"} img={"/ametist2.jpg"} gridArea={"categ3"}/>
-      <FeaturedCategroyCard category={"CATEGORY"} img={"/ametist.jpg"} gridArea={"categ4"}/>
+      {categories.map((category, index) => (
+        <FeaturedCategroyCard
+          key={category.name}
+          category={category.name}
+          img={test[index]}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
-export default FeaturedCategories
+export default FeaturedCategories;

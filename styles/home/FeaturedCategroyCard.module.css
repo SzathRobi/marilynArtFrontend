@@ -1,4 +1,7 @@
 .featuredCategory {
+  min-width: 20rem;
+  min-height: 20rem;
+  flex: 1;
   position: relative;
   border-radius: 4px;
   overflow: hidden;

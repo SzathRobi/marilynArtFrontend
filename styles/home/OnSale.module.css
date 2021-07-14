@@ -59,7 +59,6 @@ $animationSpeed: 40s;
 .slideTrack {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(300px * 14);
 }
 .slideTrack:hover {
   animation-play-state: paused;

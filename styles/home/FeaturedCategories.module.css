@@ -3,42 +3,11 @@
   top: -6rem;
   width: 100%;
   padding: 1rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: minmax(200px, auto);
-  grid-template-areas:
-    "categ1 categ1 categ1 categ1 categ1"
-    "categ2 categ2 categ2 categ2 categ2"
-    "categ3 categ3 categ3 categ3 categ3"
-    "categ4 categ4 categ4 categ4 categ4";
-}
-.featuredCategory1,
-.featuredCategory2,
-.featuredCategory3,
-.featuredCategory4 {
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 1px 1px 8px #444;
-  cursor: pointer;
-}
-
-.featuredCategory1 {
-  grid-area: categ1;
-  /*background-color: red;*/
-}
-.featuredCategory2 {
-  grid-area: categ2;
-  /* background-color: greenyellow;*/
-}
-.featuredCategory3 {
-  grid-area: categ3;
-  /* background-color: hotpink;*/
-}
-.featuredCategory4 {
-  grid-area: categ4;
-  /*  background-color: lightblue;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
 }
 
 .categoryTitle {
@@ -49,27 +18,4 @@
   font-size: 2rem !important;
   top: 0;
   left: 0;
-}
-
-/*.categoryImg {
-  position: absolute;
-  top: 0 !important;
-  width: 100%;
-  height: 200px;
-}*/
-
-@media (min-width: 768px) {
-  .featuredCategories {
-    padding: 1rem 2rem;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-template-areas:
-      "categ1 categ1 categ1 categ2 categ2"
-      "categ1 categ1 categ1 categ2 categ2"
-      "categ1 categ1 categ1 categ2 categ2"
-      "categ3 categ3 categ3 categ2 categ2"
-      "categ3 categ3 categ3 categ4 categ4"
-      "categ3 categ3 categ3 categ4 categ4"
-      "categ3 categ3 categ3 categ4 categ4";
-  }
 }

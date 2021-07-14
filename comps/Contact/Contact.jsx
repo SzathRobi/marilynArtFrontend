@@ -8,7 +8,7 @@ import {
   makeStyles,
   TextareaAutosize,
   TextField,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import Popup from "./Popup/Popup";
 
@@ -17,12 +17,12 @@ const useStyles = makeStyles({
     backgroundColor: "#039be5",
     color: "#f4f4f4",
     "&:hover": {
-      backgroundColor: "#0288D1"
+      backgroundColor: "#0288D1",
     },
     "@media (min-width:1024px)": {
-      fontSize: 15
-    }
-  }
+      fontSize: 15,
+    },
+  },
 });
 
 const Contact = () => {

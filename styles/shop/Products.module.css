@@ -9,7 +9,6 @@
 
 @media (min-width: 1024px) {
   .root {
-    width: calc(100% - 340px);
-    margin: 0 0 0 auto;
+    width: calc(100% - 300px);
   }
 }

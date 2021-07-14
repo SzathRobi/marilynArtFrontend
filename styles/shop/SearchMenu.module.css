@@ -1,39 +1,29 @@
 .root {
+  height: 22rem;
+  background-color: #4facfe;
   width: 90%;
-  margin: 0 auto;
+  border-radius: 0.5rem;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 1rem 0;
   position: relative;
 }
-.searchForm {
-  margin-bottom: 2rem;
-  background-color: #74d1fc;
-  border-radius: 0.5rem;
-  position: relative;
-}
-.searchInput {
-  width: 90%;
-  border: 2px solid red;
-}
-.searchBtn {
-  position: absolute;
-  top: 0;
-  right: -2rem;
-}
-.collapse {
-  margin: 0.5rem 0;
-  border-radius: 0.5rem;
-  background-color: #b3e5fc;
-}
-.collapseText {
-  padding-left: 0.7rem;
-}
+
 .category {
-  border-radius: 0.5rem;
-  background-color: #74d1fc !important;
+  border-radius: 1rem;
+  background-color: #b5eaff !important;
+  margin: 0.5rem 0 !important;
+}
+.categoryText span {
+  font-size: 1.3rem;
+  padding: 0 1rem;
 }
 
 @media (min-width: 1024px) {
   .root {
-    width: 300px;
+    width: 25rem;
     margin: 0 1rem;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 5rem;
   }
 }

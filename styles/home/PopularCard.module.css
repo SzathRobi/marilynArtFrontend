@@ -10,8 +10,6 @@
 .title {
   font-weight: 600;
   margin-bottom: 0.2rem !important;
-  position: absolute;
-  bottom: 18rem;
 }
 .imgContainer {
   width: 100%;
@@ -36,15 +34,22 @@
   z-index: 1;
 }
 .textContainer {
+  width: 100%;
   position: absolute;
-  bottom: -3rem;
+  bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-left: 20px;
-  min-height: 18rem;
+  min-height: 12rem;
 }
+
 .description {
   text-align: left;
   margin: 1.5rem 0 3rem !important;
+}
+
+.textContainer button {
+  position: absolute;
+  bottom: 1rem;
 }
