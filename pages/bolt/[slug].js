@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
@@ -58,6 +59,9 @@ function ProductDetail({ product }) {
 
   return (
     <div className={styles.root}>
+      <Head>
+        <title>MarilynArt/{product.Name}</title>
+      </Head>
       <div className={styles.landing}>
         <Image src="/detailBg" layout="fill" className={styles.bg} alt="" />
         <Typography className={styles.title} variant="h4">

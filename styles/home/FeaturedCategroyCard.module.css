@@ -16,25 +16,24 @@
   position: absolute;
   width: 8rem;
   height: 0;
-  background-color: #62cbff;
-  border-radius: 8px;
+  background-color: rgba(98, 203, 255, 0.6);
+  border-radius: 2rem;
   z-index: 10;
-  transform: rotate(30deg);
 }
 
 .featuredCategory::before {
   top: -5rem;
-  right: 0.5rem;
+  right: 0;
 }
 
 .featuredCategory::after {
   bottom: -5rem;
-  right: 7rem;
+  right: 8rem;
 }
 
 .featuredCategory:hover::before,
 .featuredCategory:hover::after {
-  height: 25rem;
+  height: 30rem;
 }
 
 .hiddenText {

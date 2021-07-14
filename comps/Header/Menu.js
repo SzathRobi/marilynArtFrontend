@@ -12,7 +12,7 @@ import {
   ListItemText,
   Divider,
   Badge,
-  makeStyles
+  makeStyles,
 } from "@material-ui/core";
 
 import CloseRoundedIcon from "@material-ui/icons/CloseRounded";
@@ -21,7 +21,7 @@ import StoreMallDirectoryRoundedIcon from "@material-ui/icons/StoreMallDirectory
 import ContactMailRoundedIcon from "@material-ui/icons/ContactMailRounded";
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import styles from "../../styles/header/Menu.module.css"
+import styles from "../../styles/header/Menu.module.css";
 
 const useStyles = makeStyles({
   root: {},
@@ -29,11 +29,11 @@ const useStyles = makeStyles({
     position: "relative",
     left: "-0.5rem",
     padding: "0.5rem",
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
   },
   divider: {
-    margin: "10px 0 0 0"
-  }
+    margin: "10px 0 0 0",
+  },
 });
 
 const Menu = ({ drawerOpen, updateDrawerOpen }) => {
@@ -46,7 +46,7 @@ const Menu = ({ drawerOpen, updateDrawerOpen }) => {
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
             <IconButton onClick={updateDrawerOpen} className={classes.closeBtn}>
-              <CloseRoundedIcon fontSize="small"/>
+              <CloseRoundedIcon fontSize="small" />
             </IconButton>
             Menü
           </ListSubheader>
@@ -60,10 +60,10 @@ const Menu = ({ drawerOpen, updateDrawerOpen }) => {
               </ListItemIcon>
               <ListItemText primary="Főoldal" />
             </ListItem>
-          </a>  
+          </a>
         </Link>
         <Link href="/bolt">
-          <a>    
+          <a>
             <ListItem button onClick={updateDrawerOpen}>
               <ListItemIcon>
                 <StoreMallDirectoryRoundedIcon />
@@ -84,7 +84,7 @@ const Menu = ({ drawerOpen, updateDrawerOpen }) => {
         </Link>
 
         <Divider />
-     
+
         <Link href="/auth/bejelentkezes">
           <a>
             <ListItem button onClick={updateDrawerOpen}>
@@ -95,18 +95,16 @@ const Menu = ({ drawerOpen, updateDrawerOpen }) => {
             </ListItem>
           </a>
         </Link>
-       
+
         <Link href="/kosar">
           <a>
             <ListItem button onClick={updateDrawerOpen}>
               <ListItemIcon>
-                <Badge badgeContent={2} color="secondary">
-                  <ShoppingCartRoundedIcon />
-                </Badge>
+                <ShoppingCartRoundedIcon />
               </ListItemIcon>
               <ListItemText primary="Kosár" />
             </ListItem>
-          </a>    
+          </a>
         </Link>
       </List>
     </Drawer>

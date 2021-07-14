@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import axios from "axios";
 import {
@@ -94,6 +95,9 @@ const Contact = () => {
 
   return (
     <div className={styles.root}>
+      <Head>
+        <title>MarilynArt/Kapcsolat</title>
+      </Head>
       <div className={styles.titleContainer}>
         <Typography className={styles.title} variant="h4">
           Kapcsolat

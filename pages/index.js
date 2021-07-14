@@ -9,7 +9,8 @@ import FeaturedCategories from "../comps/Home/FeaturedCategories/FeaturedCategor
 import OnSale from "../comps/Home/OnSale/OnSale";
 
 function Home({ categories, onSaleProducts, featuredProducts }) {
-  const { setCategories } = useContext(MarilynContext);
+  const { setCategories, setCategoryTab } = useContext(MarilynContext);
+
   useEffect(() => {
     setCategories(categories);
   });
@@ -17,7 +18,7 @@ function Home({ categories, onSaleProducts, featuredProducts }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>MarilyArt</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
