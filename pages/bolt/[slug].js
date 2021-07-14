@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import head from "next/head";
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
